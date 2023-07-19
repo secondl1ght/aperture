@@ -1,5 +1,5 @@
 # The address which the proxy can be reached at.
-listenaddr: "localhost:8081"
+listenaddr: "lnc-mailbox.onrender.com:443"
 
 # The root path of static content to serve upon receiving a request the proxy
 # cannot handle.
@@ -12,12 +12,12 @@ servestatic: false
 # The log level that should be used for the proxy.
 #
 # Valid options include: trace, debug, info, warn, error, critical, off.
-debuglevel: "debug"
+debuglevel: "trace"
 
 # Whether the proxy should create a valid certificate through Let's Encrypt for
 # the fully qualifying domain name.
-autocert: false
-servername: aperture.example.com
+autocert: true
+servername: lnc-mailbox.onrender.com
 
 # The port on which the pprof profile will be served. If no port is provided,
 # the profile will not be served.
@@ -48,7 +48,7 @@ authenticator:
   devserver: false
 
   # Set to true to disable any auth.
-  disable: false
+  disable: true
 
 # The selected database backend. The current default backend is "sqlite". 
 # Aperture also has support for postgres and etcd.
@@ -195,11 +195,11 @@ tor:
 # per burst and a new message every 20 milliseconds.
 hashmail:
   enabled: true
-  messagerate: 20ms
-  messageburstallowance: 1000
+  messagerate: 1ms
+  messageburstallowance: 99999999
 
 # Enable the prometheus metrics exporter so that a prometheus server can scrape
 # the metrics.
 prometheus:
-  enabled: true
+  enabled: false
   listenaddr: "localhost:9000"
