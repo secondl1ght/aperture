@@ -2,7 +2,7 @@ listenaddr: 'lnc-mailbox.onrender.com:443'
 staticroot: ./static
 servestatic: false
 debuglevel: trace
-autocert: true
+autocert: false
 servername: lnc-mailbox.onrender.com
 profile: 9999
 authenticator:
