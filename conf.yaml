@@ -1,0 +1,36 @@
+listenaddr: '0.0.0.0:8081'
+staticroot: ./static
+servestatic: false
+debuglevel: trace
+autocert: false
+servername: lnc-mailbox.onrender.com
+profile: 9999
+authenticator:
+  disable: true
+dbbackend: sqlite
+sqlite:
+  dbfile: /path/to/.aperture/aperture.db
+postgres:
+  host: localhost
+  port: 5432
+  user: user
+  password: password
+  dbname: aperture
+  maxconnections: 25
+  requireSSL: true
+etcd:
+  host: 'localhost:2379'
+  user: user
+  password: password
+tor:
+  control: 'localhost:9051'
+  listenport: 8082
+  virtualport: 8082
+  v3: false
+hashmail:
+  enabled: true
+  messagerate: 1ms
+  messageburstallowance: 99999999
+prometheus:
+  enabled: false
+  listenaddr: 'localhost:9000'
